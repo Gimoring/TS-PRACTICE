@@ -1,17 +1,22 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//  1번째 스테이트 예제 import GuestList from './state/GuestList';
+//  2번째 스테이트 예제 import UserSearch from './state/UserSearch';
+//  3번째 이벤트 예제import EventComponent from './events/EventComponent';
+import UserSearch from './refs/UserSearch'; //4번째 ref 예제.
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+	return (
+		<div>
+			<UserSearch />
+		</div>
+	);
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.querySelector('#root'));
+
+// workflow
+/*
+  컴포넌트 Props에 타입을 추가한다.
+  컴포넌트 스테이트에 타입을 추가한다.
+  이벤트핸들러에 타입을 추가한다.
+*/
